@@ -68,14 +68,19 @@
   width: 100%;
   padding: 0 !important;
 }
+#email{
+
+ flex: 0 0 auto;
+ width: 33.33333333%;
+}
 main {
   width: 100%;
   margin: 0;
   min-height: 100%;
 }
 #logo {
-  height: 100px;
-  width: 100px;
+  height: 200px;
+  width: 300px;
 }
 footer {
   background-color: rgb(119, 134, 129);
@@ -97,7 +102,7 @@ footer {
   color: rgb(155, 135, 233);
 } */
 .colores1 th {
-  background-color: red;
+  background-color: rgb(119, 134, 129);
 }
 li {
   padding: 0 2.5rem;
