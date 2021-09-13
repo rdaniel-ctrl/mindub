@@ -122,27 +122,43 @@ const app = Vue.createApp({
     },
     // calculo a los mas comprometidos
     calculodecompro() {
-      let miembroporsentaje = Math.round(
+      let miembroporsentaje = Math.ceil(
         (this.statistics.miembrosconvotos.length * 10) / 100
       );
       this.statistics.miembrosconvotos.sort((a, b) => {
-        if (a["missed_votes"] > b["missed_votes"]) {
+        if (a["missed_votes_pct"] > b["missed_votes_pct"]) {
           return 1;
         }
-        if (a["missed_votes"] < b["missed_votes"]) {
+        if (a["missed_votes_pct"] < b["missed_votes_pct"]) {
           return -1;
         }
         return 0;
       });
       let index = this.statistics.miembrosconvotos.length - miembroporsentaje;
-      for (let i = index; i < this.statistics.miembrosconvotos.length; i++) {
-        this.statistics.leastEngaged.unshift(
-          this.statistics.miembrosconvotos[i]
-        );
-      }
-      for (let i = 0; i < miembroporsentaje; i++) {
-        this.statistics.mostEngaged.push(this.statistics.miembrosconvotos[i]);
-      }
+       this.statistics.leastEngaged = this.statistics.miembrosconvotos.filter(miembro=>miembro.missed_votes_pct >= this.statistics.miembrosconvotos[index].missed_votes_pct)
+      // for (let i = index; i < this.statistics.miembrosconvotos.length; i++) {
+      //   this.statistics.leastEngaged.unshift(
+      //     this.statistics.miembrosconvotos[i]
+      //   );
+      // }
+      let porque = this.statistics.miembrosconvotos.sort((a, b) => {
+        if (a["missed_votes_pct"] < b["missed_votes_pct"]) {
+          return -  1;
+        }
+        if (a["missed_votes_pct"] > b["missed_votes_pct"]) {
+          return 1;
+        }
+        return 0;
+      });
+      let kk = porque[miembroporsentaje - 1]
+      // let nombre = this.statistics.miembrosconvotos.length - miembroporsentaje
+      let varia = porque.filter(member=>member.missed_votes_pct <=kk.missed_votes_pct)
+      this.statistics.mostEngaged = varia
+      // this.statistics.mostEngaged = this.statistics.miembrosconvotos.filter(miembro=> miembro.missed_votes_pct <= this.statistics.miembrosconvotos[nombre].missed_votes_pct)
+      // for (let i = 0; i < miembroporsentaje; i++) {
+      //   this.statistics.mostEngaged.push(this.statistics.miembrosconvotos[i]);
+      // }
+
     },
     // calculos a los mas leales
     leales() {

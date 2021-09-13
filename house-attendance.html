@@ -138,7 +138,7 @@
                             <tr v-for="member in statistics.mostEngaged">
                                 <td><a v-bind:href="member.url || null" target="_blank">{{member.last_name}},
                                         {{member.first_name}}{{member.middle_name ||""}}</a></td>
-                                <td>{{member.missed_votes}}&percnt;</td>
+                                <td>{{member.missed_votes}}</td>
                                 <td>{{member.missed_votes_pct}}&percnt;</td>
                             </tr>
 
@@ -157,7 +157,7 @@
                             <tr v-for="member in statistics.leastEngaged">
                                 <td><a v-bind:href="member.url || null" target="_blank">{{member.last_name}},
                                         {{member.first_name}}{{member.middle_name ||""}}</a></td>
-                                <td>{{member.missed_votes}}&percnt;</td>
+                                <td>{{member.missed_votes}}</td>
                                 <td>{{member.missed_votes_pct}}&percnt;</td>
                             </tr>
                         </tbody>
