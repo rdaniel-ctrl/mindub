@@ -35,7 +35,8 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <!-- <a class="navbar-brand" href="#">home</a> -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -44,7 +45,8 @@
             <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropadownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropadownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
               Congress113
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -53,7 +55,8 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdaownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdaownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
               Attendance
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -62,7 +65,8 @@
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdoawnMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdoawnMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
               Party loyalty
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -74,7 +78,6 @@
       </div>
     </div>
   </nav>
-
   <div id="app">
     <main>
       <div class="separador row">
@@ -89,11 +92,11 @@
           census, but every state is entitled to at least one representative.</p>
       </div>
       <form>
-        <input type="checkbox" class="btn-check" id="democratas" v-model = "partidos" value="D">
+        <input type="checkbox" class="btn-check" id="democratas" v-model="partidos" value="D">
         <label class="btn btn-primary" for="democratas">Democrat</label>
-        <input type="checkbox" class="btn-check" id="republicanos" v-model = "partidos" value="R">
+        <input type="checkbox" class="btn-check" id="republicanos" v-model="partidos" value="R">
         <label class="btn btn-primary" for="republicanos">Republican</label>
-        <input type="checkbox" class="btn-check" id="independientes" v-model = "partidos" value="ID">
+        <input type="checkbox" class="btn-check" id="independientes" v-model="partidos" value="ID">
         <label class="btn btn-primary" for="independientes">Independent</label>
         <select name="state" id="stateSelect" v-model="estados">
           <option value="all">All States</option>
@@ -149,7 +152,7 @@
           <option value="WY">Wyoming</option>
         </select>
       </form>
-      <table class="table colores1">
+      <table class="table-responsive-sm table table-striped table-hover col-12">
         <thead>
           <th scope="col">Name</th>
           <th scope="col">Party</th>

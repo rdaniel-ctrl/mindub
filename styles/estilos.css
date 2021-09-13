@@ -30,25 +30,25 @@
   animation: loader 1s infinite;
 }
 .linea:nth-child(2) {
-  animation-delay: .1s;
+  animation-delay: 0.1s;
 }
 .linea:nth-child(3) {
-  animation-delay: .2s;
+  animation-delay: 0.2s;
 }
 .linea:nth-child(4) {
-  animation-delay: .3s;
+  animation-delay: 0.3s;
 }
 .linea:nth-child(5) {
-  animation-delay: .4s;
+  animation-delay: 0.4s;
 }
 .linea:nth-child(6) {
-  animation-delay: .5s;
+  animation-delay: 0.5s;
 }
 .linea:nth-child(7) {
-  animation-delay: .7s;
+  animation-delay: 0.7s;
 }
 .linea:nth-child(8) {
-  animation-delay: .8s;
+  animation-delay: 0.8s;
 }
 @keyframes loader {
   0% {
@@ -68,10 +68,13 @@
   width: 100%;
   padding: 0 !important;
 }
-#email{
-
- flex: 0 0 auto;
- width: 33.33333333%;
+#colores {
+  background-color: rgb(119, 134, 129) !important;
+  color:aliceblue;
+}
+#email {
+  flex: 0 0 auto;
+  width: 33.33333333%;
 }
 main {
   width: 100%;
